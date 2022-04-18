@@ -1,7 +1,15 @@
-import {Text} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 
 export function Main() {
   return (
-    <Text>Hello World</Text>
+    <Text style={styles.greeting}>
+      Hello World
+    </Text>
   );
 }
+
+const styles = StyleSheet.create({
+  greeting: {
+    color: '#fff',
+  },
+});
