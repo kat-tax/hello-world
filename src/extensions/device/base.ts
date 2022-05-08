@@ -1,4 +1,5 @@
 export interface DeviceBase {
-  isDarkMode(): boolean,
   share(url: string, title: string): void,
+  getLocale(short?: boolean): string,
+  isDarkMode(): boolean,
 }
