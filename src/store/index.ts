@@ -1,11 +1,12 @@
 import {configureStore, combineReducers} from '@reduxjs/toolkit';
 import {persistReducer} from 'redux-persist';
-import database from 'extensions/storage';
+import {isDev} from 'utils/platform';
+import storage from 'extensions/storage';
 import slices from 'store/slices';
 import config from 'config';
 
 const reducer = persistReducer({
-  storage: database.create(config.NAME),
+  storage: storage.create(config.NAME),
   version: parseInt(config.STORE_VERSION),
   key: config.NAME,
   blacklist: [
@@ -19,6 +20,6 @@ export type Store = ReturnType<typeof reducer>;
 export const store = (store: Store) => store;
 export default configureStore({
   reducer,
-  devTools: true,
+  devTools: isDev(),
   middleware: [],
 });
