@@ -6,7 +6,7 @@
 const config = {
   format: 'po',
   sourceLocale: 'en',
-  locales: ['en', 'es'],
+  locales: ['en', 'es', 'de', 'ar', 'pt', 'id', 'ru'],
   fallbackLocales: {'default': 'en'},
   compileNamespace: 'ts',
   catalogs: [{
