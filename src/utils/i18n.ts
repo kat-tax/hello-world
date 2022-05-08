@@ -5,7 +5,6 @@ export async function loadLocale(locale: string) {
   const {messages} = await import(`assets/locales/${locale}/messages`);
   i18n.load(locale, messages);
   i18n.activate(locale);
-  console.log(messages);
 }
 
 i18n.loadLocaleData({

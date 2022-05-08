@@ -34,6 +34,8 @@ Clone the repository and run `yarn` to install npm dependencies.
 - [React Native Gestures](https://docs.swmansion.com/react-native-gesture-handler/docs)
 - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/docs)
 - [React Native SVG App Icon](https://github.com/aeirola/react-native-svg-app-icon)
+- [React Native Ultimate Config](https://github.com/maxkomarychev/react-native-ultimate-config)
+- [React Navigation](https://reactnavigation.org/docs/getting-started)
 - [Redux Toolkit](https://redux-toolkit.js.org/introduction/getting-started)
 - [TypeScript](https://www.typescriptlang.org/docs)
 - [LinguiJS](https://lingui.js.org/)
