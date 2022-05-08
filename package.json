@@ -12,7 +12,7 @@
     "build": "ult-scripts build-web",
     "test": "ult-scripts test-web",
     "analyze": "source-map-explorer 'build/web/static/js/*.js'",
-    "generate": "rnuc .env && lingui compile && react-native-svg-app-icon",
+    "generate": "react-native-svg-app-icon && rnuc .env && lingui compile",
     "translate": "lingui extract"
   },
   "dependencies": {
