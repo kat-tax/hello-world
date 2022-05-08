@@ -1,6 +1,8 @@
 import {i18n} from '@lingui/core';
 import {en, es, de, ar, pt, id, ru} from 'make-plural/plurals';
 
+export {i18n};
+
 export async function loadLocale(locale: string) {
   const {messages} = await import(`assets/locales/${locale}/messages`);
   i18n.load(locale, messages);

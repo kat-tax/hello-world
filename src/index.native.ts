@@ -1,6 +1,8 @@
 import 'react-native-url-polyfill/auto';
-import {AppRegistry} from 'react-native';
-import App from 'interface';
-import config from 'config';
+import 'react-native-gesture-handler';
 
-AppRegistry.registerComponent(config.NAME, () => App);
+import {AppRegistry} from 'react-native';
+import config from 'react-native-ultimate-config';
+import App from 'interface';
+
+AppRegistry.registerComponent(config.APP_NAME, () => App);

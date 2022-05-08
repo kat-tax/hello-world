@@ -4,6 +4,8 @@ import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
 
+import android.os.Bundle;
+
 public class MainActivity extends ReactActivity {
 
   /**
@@ -22,6 +24,15 @@ public class MainActivity extends ReactActivity {
   @Override
   protected ReactActivityDelegate createReactActivityDelegate() {
     return new MainActivityDelegate(this, getMainComponentName());
+  }
+
+  /**
+   * Required to avoid crashes related to View state being not persisted consistently across Activity restarts.
+   * More information: https://reactnavigation.org/docs/getting-started/ 
+   */
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
   }
 
   public static class MainActivityDelegate extends ReactActivityDelegate {
