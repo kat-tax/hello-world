@@ -11,10 +11,9 @@ module.exports = {
     ['module-resolver', {
       root: ['./src'],
       alias: {
+        assets: './assets',
         extensions: './extensions',
         interface: './interface',
-        config: './config',
-        assets: './assets',
         store: './store',
         utils: './utils',
       },
