@@ -12,7 +12,7 @@ const config = {
   catalogs: [{
     path: 'src/assets/locales/{locale}/messages',
     include: ['src'],
-    exclude: ['**/node_modules/**', '/__tests__/', '*.test.*'],
+    exclude: ['**/node_modules/**', '/__tests__/', '*.spec.*'],
   }],
 };
 

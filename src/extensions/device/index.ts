@@ -23,6 +23,12 @@ class Device implements DeviceBase {
   isDarkMode() {
     return Appearance.getColorScheme() === 'dark';
   }
+
+  suscribeTheme(update: (isDark: boolean) => void) {
+    return Appearance.addChangeListener((e) => {
+      update(e.colorScheme === 'dark');
+    }).remove;
+  }
 }
 
 export default new Device();

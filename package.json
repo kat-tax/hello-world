@@ -13,11 +13,14 @@
     "test": "ult-scripts test-web",
     "analyze": "source-map-explorer 'build/web/static/js/*.js'",
     "generate": "react-native-svg-app-icon && rnuc .env && lingui compile",
-    "translate": "lingui extract"
+    "translate": "lingui extract",
+    "postinstall": "npm run generate"
   },
   "dependencies": {
     "@lingui/react": "^3.13.3",
+    "@react-navigation/drawer": "^6.4.1",
     "@react-navigation/native": "^6.0.10",
+    "@react-navigation/native-stack": "^6.6.2",
     "@react-navigation/stack": "^6.2.1",
     "@reduxjs/toolkit": "^1.8.1",
     "babel-polyfill": "^6.26.0",

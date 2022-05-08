@@ -11,11 +11,11 @@ module.exports = {
     ['module-resolver', {
       root: ['./src'],
       alias: {
-        assets: './assets',
         extensions: './extensions',
         interface: './interface',
-        store: './store',
+        assets: './assets',
         utils: './utils',
+        store: './store',
       },
     }],
   ],
