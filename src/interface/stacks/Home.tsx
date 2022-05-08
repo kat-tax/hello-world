@@ -1,10 +1,12 @@
 import {t} from '@lingui/macro';
 import {StyleSheet, View, Text} from 'react-native';
+import {useTheme} from '@react-navigation/native';
 
 export function Home() {
+  const {colors} = useTheme();
   return (
     <View style={styles.root}>
-      <Text style={styles.greeting}>
+      <Text selectable style={{color: colors.text}}>
         {t`Hello World`}
       </Text>
     </View>
@@ -16,8 +18,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  greeting: {
-    color: '#000',
   },
 });

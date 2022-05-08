@@ -1,8 +1,8 @@
 import {useEffect} from 'react';
 import {Provider} from 'react-redux';
 import {I18nProvider} from '@lingui/react';
-import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer, DefaultTheme, DarkTheme} from '@react-navigation/native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {PersistGate} from 'redux-persist/integration/react';
@@ -24,7 +24,7 @@ export default () => {
         <I18nProvider i18n={i18n} forceRenderOnLocaleChange={false}>
           <SafeAreaProvider>
             <GestureHandlerRootView style={{flex: 1}}>
-              <NavigationContainer>
+              <NavigationContainer theme={device.isDarkMode() ? DarkTheme : DefaultTheme}>
                 <Stack.Navigator>
                   <Stack.Screen name="Home" component={Home}/>
                 </Stack.Navigator>
