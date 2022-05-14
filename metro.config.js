@@ -13,5 +13,6 @@ module.exports = {
         inlineRequires: true,
       },
     }),
+    assetPlugins: ['react-native-svg-asset-plugin'],
   },
 };

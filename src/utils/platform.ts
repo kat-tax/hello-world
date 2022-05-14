@@ -8,6 +8,10 @@ export function isDev() {
   return process.env.NODE_ENV === 'development';
 }
 
+export function isTV() {
+  return Platform.isTV;
+}
+
 export function isWeb() {
   return Platform.OS === 'web';
 }
