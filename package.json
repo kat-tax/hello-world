@@ -59,10 +59,5 @@
   "browserslist": {
     "production": ">0.2%, not dead, not op_mini all",
     "development": "last 2 versions"
-  },
-  "stackblitz": {
-    "startCommand": "npm start",
-    "htmlTemplate": "web/index.html",
-    "exportProjectTo": "src"
   }
 }
