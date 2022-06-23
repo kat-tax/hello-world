@@ -13,6 +13,10 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/interface/layout/Main.tsx:7
+#: src/interface/stacks/Home.tsx:10
 msgid "Hello World"
 msgstr "Halo Dunia"
+
+#: src/interface/stacks/Settings.tsx:10
+msgid "Put settings here"
+msgstr ""

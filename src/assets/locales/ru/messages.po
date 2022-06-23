@@ -6,7 +6,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: ru\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
 
-#: src/interface/layout/Main.tsx:7
+#: src/interface/stacks/Home.tsx:10
 msgid "Hello World"
 msgstr "Здравствуй мир"
+
+#: src/interface/stacks/Settings.tsx:10
+msgid "Put settings here"
+msgstr ""

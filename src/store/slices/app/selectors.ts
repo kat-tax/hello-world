@@ -1,4 +1,4 @@
-import {createSelector} from '@reduxjs/toolkit';
-import {store} from 'store';
+import {createSelector as _} from '@reduxjs/toolkit';
+import {getStore as s} from 'store';
 
-export const isActive = createSelector(store, store => store.app.active);
+export const isActive = _(s, s => s.app.active);

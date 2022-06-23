@@ -3,7 +3,7 @@
  * @type {Partial<import('@lingui/conf').LinguiConfig>}
  */
 
-const config = {
+module.exports = {
   format: 'po',
   sourceLocale: 'en',
   locales: ['en', 'es', 'de', 'ar', 'pt', 'id', 'ru'],
@@ -15,5 +15,3 @@ const config = {
     exclude: ['**/node_modules/**', '/__tests__/', '*.spec.*'],
   }],
 };
-
-module.exports = config;

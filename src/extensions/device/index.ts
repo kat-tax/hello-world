@@ -1,13 +1,8 @@
-import {Share, Platform, Appearance, NativeModules} from 'react-native';
+import {Share, Platform, NativeModules} from 'react-native';
+
 import type {DeviceBase} from 'extensions/device/base';
 
 class Device implements DeviceBase {
-  share(url: string, title: string) {
-    Share.share({url, title, message: url}, {
-      dialogTitle: title,
-    });
-  }
-
   getLocale(short?: boolean) {
     const locale: string = Platform.OS === 'ios'
       ? NativeModules.SettingsManager.settings.AppleLocale
@@ -20,14 +15,10 @@ class Device implements DeviceBase {
       : locale;
   }
 
-  isDarkMode() {
-    return Appearance.getColorScheme() === 'dark';
-  }
-
-  suscribeTheme(update: (isDark: boolean) => void) {
-    return Appearance.addChangeListener((e) => {
-      update(e.colorScheme === 'dark');
-    }).remove;
+  share(url: string, title: string) {
+    Share.share({url, title, message: url}, {
+      dialogTitle: title,
+    });
   }
 }
 

@@ -64,6 +64,8 @@
     "babel.config.js",
     "metro.config.js",
     "jest.config.js",
+    "lingui.config.js",
+    "webpack.config.js",
     "react-native.config.js"
   ]
 }

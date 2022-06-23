@@ -8,6 +8,6 @@ export function getDateRelative(date: Date, base: Date) {
   return formatRelative(date, base);
 }
 
-export function getDateFrom(date: Date, base: Date) {
+export function getDateDistance(date: Date, base: Date) {
   return formatDistance(date, base);
 }

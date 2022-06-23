@@ -1,8 +1,6 @@
+// @ts-check
 /**
- * Metro configuration for React Native
- * https://github.com/facebook/react-native
- *
- * @format
+ * @type {Partial<import('metro-config').ConfigT>}
  */
 
 module.exports = {
