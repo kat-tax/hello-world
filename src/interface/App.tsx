@@ -1,31 +1,31 @@
 import {useEffect} from 'react';
-import {Provider} from 'react-redux';
 import {I18nProvider} from '@lingui/react';
-import {persistStore} from 'redux-persist';
-import {PersistGate} from 'redux-persist/integration/react';
-import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-//import {Loading} from 'interface/stacks/Loading';
-import {Navigation} from 'interface/Navigation';
+import {SafeAreaProvider} from 'extensions/viewport/SafeArea';
+import {GestureHandlerRootView} from 'extensions/viewport/GestureHandlerRootView';
+import {DrawerLayout} from 'extensions/viewport/DrawerLayout';
+import {useLanguage} from 'interface/hooks/useLanguage';
+import {Home} from 'interface/stacks/Home';
+import {Menu} from 'interface/stacks/Menu';
 import {i18n, loadLocale} from 'utils/i18n';
-import device from 'extensions/device';
-import store from 'store';
 
 export function App() {
+  const language = useLanguage();
   useEffect(() => {
-    loadLocale(device.getLocale(true));
-  }, []);
+    loadLocale(language);
+  }, [language]);
   return (
-    <Provider store={store}>
-      <PersistGate loading={undefined} persistor={persistStore(store)}>
-        <I18nProvider i18n={i18n} forceRenderOnLocaleChange={false}>
-          <SafeAreaProvider>
-            <GestureHandlerRootView style={{flex: 1}}>
-              <Navigation/>
-            </GestureHandlerRootView>
-          </SafeAreaProvider>
-        </I18nProvider>
-      </PersistGate>
-    </Provider>
+    <I18nProvider i18n={i18n} forceRenderOnLocaleChange>
+      <SafeAreaProvider>
+        <GestureHandlerRootView style={{flex: 1}}>
+          <DrawerLayout
+            useNativeAnimations
+            drawerWidth={200}
+            drawerType="front"
+            renderNavigationView={() => <Menu/>}>
+            <Home/>
+          </DrawerLayout>
+        </GestureHandlerRootView>
+      </SafeAreaProvider>
+    </I18nProvider>
   )
 };

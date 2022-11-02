@@ -1,10 +1,8 @@
 import {createSlice} from '@reduxjs/toolkit';
 import * as reducers from './reducers';
-import type {AppStore} from './types';
+import type {SettingsStore} from './types';
 
-export const initialState: AppStore = {
-  ready: false,
-};
+export const initialState: SettingsStore = {};
 
 export default createSlice({
   name: 'app',

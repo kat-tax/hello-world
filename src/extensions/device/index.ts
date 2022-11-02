@@ -1,4 +1,5 @@
 import {Share, Platform, NativeModules} from 'react-native';
+import NetInfo from '@react-native-community/netinfo';
 
 import type {DeviceBase} from 'extensions/device/base';
 
@@ -19,6 +20,17 @@ class Device implements DeviceBase {
     Share.share({url, title, message: url}, {
       dialogTitle: title,
     });
+  }
+
+  async isOnline() {
+    const netinfo = await NetInfo.fetch();
+    return !!(netinfo.isConnected && netinfo.isInternetReachable);
+  }
+
+  suscribeOnline(update: (isOnline: boolean) => void) {
+    return NetInfo.addEventListener(e => () =>
+      update(!!(e.isConnected && e.isInternetReachable))
+    );
   }
 }
 

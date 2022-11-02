@@ -1,22 +1,12 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-05-08 05:09-0500\n"
+"POT-Creation-Date: 2022-11-02 15:41-0500\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: de\n"
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Plural-Forms: \n"
 
-#: src/interface/stacks/Home.tsx:10
-msgid "Hello World"
-msgstr "Hallo Welt"
-
-#: src/interface/stacks/Settings.tsx:10
-msgid "Put settings here"
-msgstr ""
+#: src/interface/stacks/Home.tsx:8
+msgid "Hello, World!"
+msgstr "Hallo Welt!"

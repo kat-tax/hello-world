@@ -1,6 +1,5 @@
-import {AppStore, AppActivate} from './types';
+import {AppStore} from './types';
 
-export function activate(store: AppStore, action: AppActivate) {
-  const {active} = action.payload;
-  store.active = active;
+export function start(store: AppStore) {
+  store.ready = true;
 }
