@@ -1,4 +1,7 @@
+build
 node_modules
 yarn.lock
 yarn-error.log
 rnuc.xcconfig
+TODO.md
+.env.local

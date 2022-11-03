@@ -8,22 +8,19 @@
   <title>Hello App Display Name</title>
   <style>
     html {
-      background: #000;
       font-family: proxima-nova, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-      -webkit-tap-highlight-color: transparent;
-      -webkit-font-smoothing: antialiased;
-      -webkit-text-size-adjust: 100%;
-          -ms-text-size-adjust: 100%;
     }
 
-    html, body, #app {
+    html, body, #root {
       height: 100%;
       width: 100%;
       margin: 0;
       display: flex;
       overflow-y: hidden;
-      scrollbar-width: thin;
-      scrollbar-color: #555 #EEE;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+          -ms-text-size-adjust: 100%;
       -webkit-user-select: none;
          -moz-user-select: none;
           -ms-user-select: none;
@@ -35,6 +32,6 @@
   </style>
 </head>
 <body>
-  <div id="app"></div>
+  <div id="root"></div>
 </body>
 </html>

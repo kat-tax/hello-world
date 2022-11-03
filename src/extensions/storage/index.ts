@@ -1,26 +1,27 @@
 import {MMKV} from 'react-native-mmkv';
-
 import type {StorageBase} from 'extensions/storage/base';
-import type {Storage as PersistStorage} from 'redux-persist';
 
 export class Storage implements StorageBase {
-  create(key: string) {
-    const database = new MMKV({id: key});
-    const storage: PersistStorage = {
-      setItem: (k, v) => {
-        database.set(k, v);
+  create(id: string) {
+    const db = new MMKV({id});
+    return {
+      setItem: (key: string, value: any) => {
+        db.set(key, value);
         return Promise.resolve(true);
       },
-      getItem: (k) => {
-        const v = database.getString(k);
-        return Promise.resolve(v);
+      getItem: (key: string) => {
+        const value = db.getString(key);
+        return Promise.resolve(value);
       },
-      removeItem: (k) => {
-        database.delete(k);
+      removeItem: (key: string) => {
+        db.delete(key);
         return Promise.resolve();
       },
+      clear: () => {
+        db.clearAll();
+        return Promise.resolve();
+      }
     };
-    return storage;
   }
 }
 

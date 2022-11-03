@@ -1,17 +1,15 @@
-import localForage from 'localforage';
-
+import {createStore, get, set, del, clear} from 'idb-keyval';
 import type {StorageBase} from 'extensions/storage/base';
-import type {Storage as PersistStorage} from 'redux-persist';
 
 export class Storage implements StorageBase {
-  create(key: string) {
-    const database = localForage.createInstance({name: key});
-    const storage: PersistStorage = {
-      getItem: database.getItem,
-      setItem: database.setItem,
-      removeItem: database.removeItem,
+  create(id: string) {
+    const db = createStore(`db-${id}`, `store-${id}`);
+    return {
+      getItem: (key: string) => get(key, db),
+      setItem: (key: string, value: any) => set(key, value, db),
+      removeItem: (key: string) => del(key, db),
+      clear: () => clear(db),
     };
-    return storage;
   }
 }
 

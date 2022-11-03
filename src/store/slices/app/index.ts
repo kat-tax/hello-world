@@ -3,7 +3,11 @@ import * as reducers from './reducers';
 import type {AppStore} from './types';
 
 export const initialState: AppStore = {
-  active: false,
+  ready: false,
 };
 
-export default createSlice({reducers, initialState, name: 'app'});
+export default createSlice({
+  name: 'app',
+  initialState,
+  reducers,
+});
