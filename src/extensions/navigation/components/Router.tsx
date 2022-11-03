@@ -1,4 +1,3 @@
-import React from 'react';
 import {useState, useLayoutEffect} from 'react';
 import {Router as BaseRouter} from 'react-router';
 import type {History} from 'history';

@@ -1,3 +1,3 @@
-export function useAndroidBackButton(callback: () => boolean) {
+export function useAndroidBackButton(_callback: () => boolean) {
   // no-op
 }

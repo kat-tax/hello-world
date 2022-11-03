@@ -42,9 +42,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
   },
   header: {
-    color: '#000',
-    fontSize: 36,
     marginBottom: 8,
+    fontSize: 36,
+    color: '#000',
   },
   headerDark: {
     color: '#FFF',

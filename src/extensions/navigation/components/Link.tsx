@@ -1,4 +1,3 @@
-import React from 'react';
 import {forwardRef} from 'react';
 import {useHref} from 'react-router';
 import {useLinkClickHandler} from '../hooks/useLinkClickHandler';
