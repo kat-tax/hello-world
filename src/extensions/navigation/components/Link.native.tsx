@@ -1,4 +1,3 @@
-import React from 'react';
 import {useCallback} from 'react';
 import {useColorScheme, GestureResponderEvent, Pressable, PressableProps} from 'react-native';
 import {useLinkPressHandler} from '../hooks/useLinkPressHandler';
