@@ -10,9 +10,9 @@ export function Menu() {
 
 const styles = StyleSheet.create({
   root: {
-    flex: 1,
+    height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'black',
+    backgroundColor: 'red',
   },
 });

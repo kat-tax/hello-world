@@ -1,10 +1,13 @@
 import {Store} from 'interface/Store';
-import {App} from 'interface/App';
+import {Providers} from 'interface/Providers';
+import {Navigator} from 'interface/Navigator';
 
 export function Main() {
   return (
     <Store>
-      <App/>
+      <Providers>
+        <Navigator/>
+      </Providers>
     </Store>
   )
 }

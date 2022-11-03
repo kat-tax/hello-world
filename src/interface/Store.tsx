@@ -1,6 +1,6 @@
-import {Provider} from 'react-redux';
-import {persistStore} from 'redux-persist';
+import {Provider as ReduxProvider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
+import {persistStore} from 'redux-persist';
 import store from 'store';
 
 export interface StoreProps {
@@ -9,10 +9,10 @@ export interface StoreProps {
 
 export function Store(props: StoreProps) {
   return (
-    <Provider store={store}>
+    <ReduxProvider store={store}>
       <PersistGate persistor={persistStore(store)}>
         {props.children}
       </PersistGate>
-    </Provider>
+    </ReduxProvider>
   )
 };
