@@ -1,8 +1,8 @@
 import {useRef, useCallback} from 'react';
 import {useWindowDimensions, View, StyleSheet} from 'react-native';
-import {DrawerLayout} from 'extensions/viewport/DrawerLayout';
-import {Outlet} from 'extensions/navigation';
+import {DrawerLayout} from 'interface/base/DrawerLayout';
 import {Menu} from 'interface/layout/Menu';
+import {Outlet} from 'extensions/navigation';
 import {isWeb} from 'utils/platform';
 
 const MENU_WIDTH = 200;
@@ -10,22 +10,21 @@ const MENU_WIDTH = 200;
 export function App() {
   const drawer = useRef<DrawerLayout>(null);
   const screen = useWindowDimensions();
-  const isFixedMenu = screen.width > 800;
-  const isDrawerEnabled = !isFixedMenu;
+  const hasDrawer = screen.width < 800;
 
-  const renderMenu = useCallback(() => isDrawerEnabled ? <Menu/> : null, [isDrawerEnabled]);
   const openMenu = useCallback(() => drawer.current?.openDrawer(), []);
+  const renderMenu = useCallback(() => hasDrawer ? <Menu/> : null, [hasDrawer]);
 
   return (
     <DrawerLayout
       drawerType="front"
       drawerPosition="right"
       drawerWidth={MENU_WIDTH}
-      drawerLockMode={isDrawerEnabled ? 'unlocked' : 'locked-closed'}
+      drawerLockMode={hasDrawer ? 'unlocked' : 'locked-closed'}
       useNativeAnimations={!isWeb()}
       renderNavigationView={renderMenu}>
       <View style={styles.root}>
-        {isFixedMenu &&
+        {!hasDrawer &&
           <View style={styles.menu}>
             <Menu/>
           </View>
@@ -43,5 +42,7 @@ const styles = StyleSheet.create({
   },
   menu: {
     width: MENU_WIDTH,
+    borderRightWidth: 1,
+    borderColor: '#333',
   },
 });

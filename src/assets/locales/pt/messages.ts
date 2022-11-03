@@ -1,1 +1,1 @@
-/*eslint-disable*/export const messages={"Hello, World!":"Olá Mundo!"};
+/*eslint-disable*/export const messages={"Dark":"Escuro","Default":"Predefinição","Hello, World!":"Olá Mundo!","Home":"Casa","Language":"Linguagem","Light":"Leve","Settings":"Configurações","Theme":"Tema"};

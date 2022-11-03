@@ -1,15 +1,15 @@
 import {useEffect} from 'react';
 import {I18nProvider} from '@lingui/react';
-import {SafeAreaProvider} from 'extensions/viewport/SafeArea';
-import {GestureHandlerRootView} from 'extensions/viewport/GestureHandlerRootView';
 import {useLanguage} from 'interface/hooks/useLanguage';
+import {SafeAreaProvider} from 'interface/base/SafeArea';
+import {GestureHandlerRootView} from 'interface/base/GestureHandlerRootView';
 import {i18n, loadLocale} from 'utils/i18n';
 
 export interface ProviderProps {
   children: JSX.Element,
 }
 
-export function Providers(props: ProviderProps) {
+export function Provider(props: ProviderProps) {
   const language = useLanguage();
 
   useEffect(() => {

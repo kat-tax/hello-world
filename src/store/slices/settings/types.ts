@@ -2,11 +2,11 @@ import type {PayloadAction} from '@reduxjs/toolkit';
 import type {Language} from 'utils/i18n';
 
 export type SettingsStore = {
-  theme?: Theme,
+  scheme?: Scheme,
   language?: Language,
 }
 
-export type SettingsTheme = PayloadAction<{theme: Theme}>
+export type SettingsScheme = PayloadAction<{scheme: Scheme}>
 export type SettingsLanguage = PayloadAction<{language: Language}>
 
-type Theme = 'light' | 'dark';
+type Scheme = 'light' | 'dark';

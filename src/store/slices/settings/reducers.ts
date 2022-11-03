@@ -1,8 +1,8 @@
-import {SettingsStore, SettingsTheme, SettingsLanguage} from './types';
+import {SettingsStore, SettingsScheme, SettingsLanguage} from './types';
 
-export function theme(store: SettingsStore, action: SettingsTheme) {
-  const {theme} = action.payload;
-  store.theme = theme;
+export function scheme(store: SettingsStore, action: SettingsScheme) {
+  const {scheme} = action.payload;
+  store.scheme = scheme;
 }
 
 export function language(store: SettingsStore, action: SettingsLanguage) {
