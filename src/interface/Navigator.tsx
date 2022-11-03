@@ -1,7 +1,7 @@
+import {Router, Routes, Route} from 'extensions/navigation';
 import {App} from 'interface/layout/App';
 import {Home} from 'interface/routes/Home';
 import {Settings} from 'interface/routes/Settings';
-import {Router, Routes, Route} from 'extensions/navigation';
 import {history} from 'store';
 
 export function Navigator() {

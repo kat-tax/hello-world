@@ -6,7 +6,7 @@
 module.exports = {
   format: 'po',
   sourceLocale: 'en',
-  locales: ['en', 'es', 'de', 'ar', 'pt', 'id', 'ru'],
+  locales: ['en', 'de', 'es', 'pt', 'ja', 'ru', 'ar', 'id'],
   fallbackLocales: {'default': 'en'},
   compileNamespace: 'ts',
   catalogs: [{

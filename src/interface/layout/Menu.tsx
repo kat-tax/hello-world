@@ -1,10 +1,17 @@
 import {t} from '@lingui/macro';
 import {StyleSheet, View, Text} from 'react-native';
+import {useScheme} from 'interface/hooks/useScheme';
 import {useLocation, Link} from 'extensions/navigation';
 
 export function Menu() {
+  const scheme = useScheme();
   const {pathname} = useLocation();
+  const isDark = scheme === 'dark';
   const classes = {
+    root: [
+      styles.root,
+      isDark && styles.rootDark,
+    ],
     home: [
       styles.link,
       pathname === '/' && styles.active,
@@ -16,7 +23,7 @@ export function Menu() {
   };
 
   return (
-    <View style={styles.root}>
+    <View style={classes.root}>
       <Link to="/">
         <View style={styles.item}>
           <Text style={classes.home}>
@@ -37,20 +44,27 @@ export function Menu() {
 
 const styles = StyleSheet.create({
   root: {
-    height: '100%',
-    backgroundColor: '#111',
     padding: 8,
+    height: '100%',
+    backgroundColor: '#272727',
+  },
+  rootDark: {
+    backgroundColor: '#111',
   },
   item: {
-    padding: 16,
+    paddingVertical: 16,
+    paddingHorizontal: 12,
   },
   link: {
-    textTransform: 'uppercase',
-    fontWeight: '600',
     fontSize: 16,
+    fontWeight: '600',
+    textTransform: 'uppercase',
     color: '#999',
   },
   active: {
     color: '#FFF',
-  }
+  },
+  activeDark: {
+    color: '#000',
+  },
 });

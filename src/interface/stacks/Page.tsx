@@ -4,7 +4,7 @@ import {useScheme} from 'interface/hooks/useScheme';
 import type {ReactNode} from 'react';
 
 export interface PageProps {
-  header: string,
+  title: string,
   children?: ReactNode,
 }
 
@@ -16,18 +16,20 @@ export function Page(props: PageProps) {
       styles.root,
       isDark && styles.rootDark,
     ],
-    header: [
-      styles.header,
-      isDark && styles.headerDark,
+    title: [
+      styles.title,
+      isDark && styles.titleDark,
     ],
   };
 
   return (
     <View style={classes.root}>
-      <Text selectable style={classes.header}>
-        {props.header}
-      </Text>
-      {props.children}
+      <View style={styles.content}>
+        <Text selectable style={classes.title}>
+          {props.title}
+        </Text>
+        {props.children}
+      </View>
     </View>
   );
 }
@@ -38,15 +40,19 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: '#fff',
   },
+  content: {
+    flex: 1,
+    maxWidth: 400,
+  },
   rootDark: {
     backgroundColor: '#000',
   },
-  header: {
+  title: {
     marginBottom: 8,
     fontSize: 36,
     color: '#000',
   },
-  headerDark: {
+  titleDark: {
     color: '#FFF',
   },
 });

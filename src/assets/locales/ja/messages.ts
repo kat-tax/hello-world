@@ -1,0 +1,1 @@
+/*eslint-disable*/export const messages={"Dark":"ダーク","Default":"デフォルト","Hello, World!":"こんにちは世界！","Home":"ホーム","Language":"言語","Light":"光","Settings":"設定","Theme":"テーマ"};

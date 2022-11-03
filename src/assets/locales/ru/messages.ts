@@ -1,1 +1,1 @@
-/*eslint-disable*/export const messages={"Dark":"Темный","Default":"По умолчанию","Hello, World!":"Привет, мир!","Home":"Дом","Language":"Язык","Light":"Легкий","Settings":"Настройки","Theme":"Тема"};
+/*eslint-disable*/export const messages={"Dark":"Темный","Default":"По умолчанию","Hello, World!":"Здравствуй, мир!","Home":"Главная","Language":"Язык","Light":"Свет","Settings":"Настройки","Theme":"Тема"};

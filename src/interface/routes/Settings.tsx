@@ -27,7 +27,7 @@ export function Settings() {
   const dispatch = useDispatch();
 
   return (
-    <Page header={t`Settings`}>
+    <Page title={t`Settings`}>
       <Text style={classes.label}>
         {t`Theme`}
       </Text>
@@ -53,6 +53,7 @@ export function Settings() {
         <Picker.Item label="Portugués" value="pt"/>
         <Picker.Item label="Bahasa Indonesia" value="id"/>
         <Picker.Item label="Русский" value="ru"/>
+        <Picker.Item label="やまと" value="ja"/>
         <Picker.Item label="عربي" value="ar"/>
       </Picker>
     </Page>
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
   label: {
     color: '#333',
     marginBottom: 8,
-    marginTop: 20,
+    marginTop: 16,
   },
   labelDark: {
     color: '#999',

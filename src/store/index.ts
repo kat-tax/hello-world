@@ -17,10 +17,10 @@ const context = createReduxHistoryContext({
 });
 
 const reducer = persistReducer({
+  key: config.APP_NAME,
   storage: storage.create(config.APP_NAME),
   version: parseInt(config.STORE_VERSION),
   blacklist: ['router', app.name],
-  key: config.APP_NAME,
 }, combineReducers({
   router: context.routerReducer,
   app: app.reducer,

@@ -1,9 +1,7 @@
 import {i18n} from '@lingui/core';
-import {en, es, de, ar, pt, id, ru} from 'make-plural/plurals';
+import {en, de, es, pt, ja, ru, ar, id} from 'make-plural/plurals';
 
-export type Language = 'en' | 'es' | 'de' | 'ar' | 'pt' | 'ru';
-
-export {i18n};
+export type Language = 'en' | 'de' | 'es' | 'pt' | 'ja' | 'ru' | 'ar' | 'id';
 
 export async function loadLocale(locale: string = 'en') {
   const {messages} = await import(`assets/locales/${locale}/messages`);
@@ -13,10 +11,11 @@ export async function loadLocale(locale: string = 'en') {
 
 i18n.loadLocaleData({
   en: {plurals: en},
-  es: {plurals: es},
   de: {plurals: de},
-  ar: {plurals: ar},
+  es: {plurals: es},
   pt: {plurals: pt},
-  id: {plurals: id},
+  ja: {plurals: ja},
   ru: {plurals: ru},
+  id: {plurals: id},
+  ar: {plurals: ar},
 });

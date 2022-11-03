@@ -26,7 +26,7 @@ msgstr "Default"
 msgid "Hello, World!"
 msgstr "Hello, World!"
 
-#: src/interface/layout/Menu.tsx:23
+#: src/interface/layout/Menu.tsx:30
 msgid "Home"
 msgstr "Home"
 
@@ -38,7 +38,7 @@ msgstr "Language"
 msgid "Light"
 msgstr "Light"
 
-#: src/interface/layout/Menu.tsx:30
+#: src/interface/layout/Menu.tsx:37
 #: src/interface/routes/Settings.tsx:30
 msgid "Settings"
 msgstr "Settings"

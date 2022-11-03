@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-11-02 23:29-0500\n"
+"POT-Creation-Date: 2022-11-03 01:52-0500\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,7 +20,7 @@ msgstr "تقصير"
 msgid "Hello, World!"
 msgstr "مرحبا بالعالم!"
 
-#: src/interface/layout/Menu.tsx:23
+#: src/interface/layout/Menu.tsx:30
 msgid "Home"
 msgstr "الصفحة الرئيسية"
 
@@ -32,7 +32,7 @@ msgstr "لغة"
 msgid "Light"
 msgstr "خفيفة"
 
-#: src/interface/layout/Menu.tsx:30
+#: src/interface/layout/Menu.tsx:37
 #: src/interface/routes/Settings.tsx:30
 msgid "Settings"
 msgstr "إعدادات"
