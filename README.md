@@ -1,6 +1,6 @@
 # HelloWorld
 
-> A production-ready React Native cross-platform template for [ULT](https://ult.dev).
+> A production-ready [React Native](https://reactnative.dev) cross-platform template for [ULT](https://ult.dev).
 
 
 ## Installation
@@ -16,7 +16,7 @@ Clone the repository and run `yarn` to install npm dependencies.
 | ----------| -----------------------------------|-----|-------|---------|
 | web       | Run the __Web__ app                |  ✅ |   ✅   |    ✅   |
 | android   | Run the __Android__ app            |  ✅ |   ✅   |    ✅   |
-| windows   | Run the __Windows__ app            |  ❌ |   ✅   |    ✅   |
+| windows   | Run the __Windows__ app            |  ❌ |   ❌   |    ✅   |
 | macos     | Run the __MacOS__ app              |  ✅ |   ❌   |    ❌   |
 | ios       | Run the __iOS__ app                |  ✅ |   ❌   |    ❌   |
 | build     | Build platforms                    |  ✅ |   ✅   |    ✅   |
