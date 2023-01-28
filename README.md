@@ -10,9 +10,11 @@ Clone the repository and run `yarn` to install npm dependencies.
 > If you're on MacOS, navigate to the *ios* folder and run `pod install`. If you encounter issues try running from XCode directly by opening the workspace file in the iOS folder.
 
 
-## Tasks
+## Commands
 
-| Command   | Description                        | Mac | Linux | Windows |
+> Choose a task below and enter `yarn <task>` or `npm <task>` in the console
+
+| Task      | Description                        | Mac | Linux | Windows |
 | ----------| -----------------------------------|-----|-------|---------|
 | web       | Run the __Web__ app                |  ✅ |   ✅   |    ✅   |
 | android   | Run the __Android__ app            |  ✅ |   ✅   |    ✅   |
