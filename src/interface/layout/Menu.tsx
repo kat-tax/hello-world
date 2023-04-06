@@ -19,6 +19,10 @@ export function Menu() {
       styles.link,
       pathname === '/' && styles.active,
     ],
+    icons: [
+      styles.link,
+      pathname === '/icons' && styles.active,
+    ],
     settings: [
       styles.link,
       pathname === '/settings' && styles.active,
@@ -31,6 +35,13 @@ export function Menu() {
         <View style={styles.item}>
           <Text style={classes.home}>
             {t`Home`}
+          </Text>
+        </View>
+      </Link>
+      <Link to="/icons">
+        <View style={styles.item}>
+          <Text style={classes.icons}>
+            {t`Icons`}
           </Text>
         </View>
       </Link>

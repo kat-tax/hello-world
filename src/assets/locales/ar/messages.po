@@ -13,36 +13,41 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/interface/routes/Settings.tsx:40
+#: src/interface/routes/Settings.tsx:43
 msgid "Dark"
 msgstr "مظلم"
 
-#: src/interface/routes/Settings.tsx:38
-#: src/interface/routes/Settings.tsx:49
+#: src/interface/routes/Settings.tsx:41
+#: src/interface/routes/Settings.tsx:52
 msgid "Default"
 msgstr "تقصير"
 
-#: src/interface/routes/Home.tsx:6
+#: src/interface/routes/Home.tsx:8
 msgid "Hello, World!"
 msgstr "مرحبا بالعالم!"
 
-#: src/interface/layout/Menu.tsx:30
+#: src/interface/layout/Menu.tsx:37
 msgid "Home"
 msgstr "الصفحة الرئيسية"
 
-#: src/interface/routes/Settings.tsx:43
+#: src/interface/layout/Menu.tsx:44
+#: src/interface/routes/Icons.tsx:9
+msgid "Icons"
+msgstr ""
+
+#: src/interface/routes/Settings.tsx:46
 msgid "Language"
 msgstr "لغة"
 
-#: src/interface/routes/Settings.tsx:39
+#: src/interface/routes/Settings.tsx:42
 msgid "Light"
 msgstr "خفيفة"
 
-#: src/interface/layout/Menu.tsx:37
-#: src/interface/routes/Settings.tsx:30
+#: src/interface/layout/Menu.tsx:51
+#: src/interface/routes/Settings.tsx:33
 msgid "Settings"
 msgstr "إعدادات"
 
-#: src/interface/routes/Settings.tsx:32
+#: src/interface/routes/Settings.tsx:35
 msgid "Theme"
 msgstr "سمة"

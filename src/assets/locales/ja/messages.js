@@ -1,1 +1,1 @@
-/*eslint-disable*/module.exports={messages:JSON.parse("{\"pvnfJD\":\"ダーク\",\"ovBPCi\":\"デフォルト\",\"uBHlUy\":\"こんにちは世界！\",\"i0qMbr\":\"ホーム\",\"vXIe7J\":\"言語\",\"1njn7W\":\"光\",\"Tz0i8g\":\"設定\",\"FEr96N\":\"テーマ\"}")};
+/*eslint-disable*/module.exports={messages:JSON.parse("{\"pvnfJD\":\"ダーク\",\"ovBPCi\":\"デフォルト\",\"uBHlUy\":\"こんにちは世界！\",\"i0qMbr\":\"ホーム\",\"mcmuCe\":\"Icons\",\"vXIe7J\":\"言語\",\"1njn7W\":\"光\",\"Tz0i8g\":\"設定\",\"FEr96N\":\"テーマ\"}")};
