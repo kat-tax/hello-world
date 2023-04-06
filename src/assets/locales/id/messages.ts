@@ -1,1 +1,0 @@
-/*eslint-disable*/export const messages={"Dark":"Gelap","Default":"Bawaan","Hello, World!":"Halo Dunia!","Home":"Rumah","Language":"Bahasa","Light":"Cahaya","Settings":"Pengaturan","Theme":"Tema"};

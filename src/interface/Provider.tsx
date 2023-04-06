@@ -18,7 +18,7 @@ export function Provider(props: ProviderProps) {
   }, [language]);
 
   return (
-    <I18nProvider i18n={i18n} forceRenderOnLocaleChange>
+    <I18nProvider i18n={i18n}>
       <SafeAreaProvider>
         <GestureHandlerRootView style={{flex: 1}}>
           {props.children}

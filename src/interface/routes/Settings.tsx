@@ -1,4 +1,5 @@
 import {t} from '@lingui/macro';
+import {useLingui} from '@lingui/react';
 import {StyleSheet, Text} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {useScheme} from 'interface/hooks/useScheme';
@@ -9,6 +10,8 @@ import {getLanguage} from 'store/slices/settings/selectors';
 import settings from 'store/slices/settings';
 
 export function Settings() {
+  useLingui();
+
   const scheme = useScheme();
   const savedScheme = useSelector(getScheme);
   const savedLanguage = useSelector(getLanguage);

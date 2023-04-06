@@ -1,17 +1,15 @@
-// @ts-check
-/**
- * @type {Partial<import('@lingui/conf').LinguiConfig>}
- */
+import type {LinguiConfig} from '@lingui/conf';
 
-module.exports = {
+const config: LinguiConfig = {
   format: 'po',
-  sourceLocale: 'en',
   locales: ['en', 'de', 'es', 'pt', 'ja', 'ru', 'ar', 'id'],
+  sourceLocale: 'en',
   fallbackLocales: {'default': 'en'},
-  compileNamespace: 'ts',
   catalogs: [{
     path: 'src/assets/locales/{locale}/messages',
-    include: ['src'],
     exclude: ['**/node_modules/**', '/__tests__/', '*.spec.*'],
+    include: ['src'],
   }],
-};
+}
+
+export default config;

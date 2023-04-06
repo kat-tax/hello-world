@@ -1,9 +1,12 @@
 import {t} from '@lingui/macro';
+import {useLingui} from '@lingui/react';
 import {StyleSheet, View, Text} from 'react-native';
 import {useScheme} from 'interface/hooks/useScheme';
 import {useLocation, Link} from 'extensions/navigation';
 
 export function Menu() {
+  useLingui();
+
   const scheme = useScheme();
   const {pathname} = useLocation();
   const isDark = scheme === 'dark';

@@ -4,7 +4,7 @@ import {en, de, es, pt, ja, ru, ar, id} from 'make-plural/plurals';
 export type Language = 'en' | 'de' | 'es' | 'pt' | 'ja' | 'ru' | 'ar' | 'id';
 
 export async function loadLocale(locale: string = 'en') {
-  const {messages} = await import(`assets/locales/${locale}/messages`);
+  const {messages} = await import(`../assets/locales/${locale}/messages.po`);
   i18n.load(locale, messages);
   i18n.activate(locale);
 }

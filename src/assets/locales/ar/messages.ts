@@ -1,1 +1,0 @@
-/*eslint-disable*/export const messages={"Dark":"مظلم","Default":"تقصير","Hello, World!":"مرحبا بالعالم!","Home":"الصفحة الرئيسية","Language":"لغة","Light":"خفيفة","Settings":"إعدادات","Theme":"سمة"};
