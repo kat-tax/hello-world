@@ -3,7 +3,6 @@ import {viteCommonjs, esbuildCommonjs} from '@originjs/vite-plugin-commonjs';
 import {lingui} from '@lingui/vite-plugin';
 import tsPaths from 'vite-tsconfig-paths';
 import react from '@vitejs/plugin-react';
-// import react from '@vitejs/plugin-react-swc';
 
 export default defineConfig({
   plugins: [
