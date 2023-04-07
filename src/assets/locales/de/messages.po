@@ -31,7 +31,7 @@ msgid "Home"
 msgstr "Startseite"
 
 #: src/interface/layout/Menu.tsx:44
-#: src/interface/routes/Icons.tsx:9
+#: src/interface/routes/Icons.tsx:16
 msgid "Icons"
 msgstr ""
 
