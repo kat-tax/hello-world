@@ -11,6 +11,9 @@
     "storybook": "storybook dev -p 6006",
     "postinstall": "npm run generate"
   },
+  "stackblitz": {
+    "startCommand": "npm run web"
+  },
   "dependencies": {
     "@lingui/react": "^4.0.0-next.7",
     "@reduxjs/toolkit": "^1.9.5",
