@@ -30,7 +30,7 @@ msgstr "Por defecto"
 msgid "Hello, World!"
 msgstr "¡Hola, mundo!"
 
-#: src/interface/layout/Menu.tsx:12
+#: src/interface/layout/Menu.tsx:13
 msgid "Home"
 msgstr "Inicio"
 
@@ -42,22 +42,22 @@ msgstr "Idioma"
 msgid "Light"
 msgstr "Luz"
 
-#: src/interface/layout/Menu.tsx:18
+#: src/interface/layout/Menu.tsx:19
 #: src/interface/routes/Notes.tsx:8
 msgid "Notes"
 msgstr ""
 
-#: src/interface/layout/Menu.tsx:25
+#: src/interface/layout/Menu.tsx:26
 #: src/interface/routes/Settings.tsx:33
 msgid "Settings"
 msgstr "Ajustes"
 
-#: src/interface/layout/Menu.tsx:21
+#: src/interface/layout/Menu.tsx:22
 #: src/interface/routes/Snippets.tsx:8
 msgid "Snippets"
 msgstr ""
 
-#: src/interface/layout/Menu.tsx:15
+#: src/interface/layout/Menu.tsx:16
 #: src/interface/routes/Tasks.tsx:33
 msgid "Tasks"
 msgstr ""

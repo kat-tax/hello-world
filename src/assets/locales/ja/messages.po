@@ -30,7 +30,7 @@ msgstr "デフォルト"
 msgid "Hello, World!"
 msgstr "こんにちは世界！"
 
-#: src/interface/layout/Menu.tsx:12
+#: src/interface/layout/Menu.tsx:13
 msgid "Home"
 msgstr "ホーム"
 
@@ -42,22 +42,22 @@ msgstr "言語"
 msgid "Light"
 msgstr "光"
 
-#: src/interface/layout/Menu.tsx:18
+#: src/interface/layout/Menu.tsx:19
 #: src/interface/routes/Notes.tsx:8
 msgid "Notes"
 msgstr ""
 
-#: src/interface/layout/Menu.tsx:25
+#: src/interface/layout/Menu.tsx:26
 #: src/interface/routes/Settings.tsx:33
 msgid "Settings"
 msgstr "設定"
 
-#: src/interface/layout/Menu.tsx:21
+#: src/interface/layout/Menu.tsx:22
 #: src/interface/routes/Snippets.tsx:8
 msgid "Snippets"
 msgstr ""
 
-#: src/interface/layout/Menu.tsx:15
+#: src/interface/layout/Menu.tsx:16
 #: src/interface/routes/Tasks.tsx:33
 msgid "Tasks"
 msgstr ""
