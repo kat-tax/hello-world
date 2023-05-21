@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2022-11-03 01:41-0500\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: jp\n"
+
+#: src/interface/routes/Settings.tsx:40
+msgid "Dark"
+msgstr ""
+
+#: src/interface/routes/Settings.tsx:38
+#: src/interface/routes/Settings.tsx:49
+msgid "Default"
+msgstr ""
+
+#: src/interface/routes/Home.tsx:6
+msgid "Hello, World!"
+msgstr ""
+
+#: src/interface/layout/Menu.tsx:30
+msgid "Home"
+msgstr ""
+
+#: src/interface/routes/Settings.tsx:43
+msgid "Language"
+msgstr ""
+
+#: src/interface/routes/Settings.tsx:39
+msgid "Light"
+msgstr ""
+
+#: src/interface/layout/Menu.tsx:37
+#: src/interface/routes/Settings.tsx:30
+msgid "Settings"
+msgstr ""
+
+#: src/interface/routes/Settings.tsx:32
+msgid "Theme"
+msgstr ""
