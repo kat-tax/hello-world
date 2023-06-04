@@ -5,9 +5,9 @@ import {useDispatch, useSelector} from 'react-redux';
 import {useScheme} from 'interface/hooks/useScheme';
 import {Picker} from 'extensions/controls/Picker';
 import {Page} from 'interface/base/Page';
-import {getScheme} from 'store/redux/settings/selectors';
-import {getLanguage} from 'store/redux/settings/selectors';
-import settings from 'store/redux/settings/slice';
+import {getScheme} from 'store/settings/selectors';
+import {getLanguage} from 'store/settings/selectors';
+import settings from 'store/settings';
 
 export function Settings() {
   useLingui();

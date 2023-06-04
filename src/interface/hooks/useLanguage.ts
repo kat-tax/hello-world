@@ -1,6 +1,6 @@
 import {useRef} from 'react';
 import {useSelector} from 'react-redux';
-import {getLanguage} from 'store/redux/settings/selectors';
+import {getLanguage} from 'store/settings/selectors';
 import device from 'extensions/device';
 
 import type {Language} from 'utils/i18n';

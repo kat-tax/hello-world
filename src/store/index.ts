@@ -6,8 +6,9 @@ import {isWeb} from 'utils/platform';
 import storage from 'extensions/storage';
 import config from 'react-native-ultimate-config';
 
-import app from './app/slice';
-import settings from './settings/slice';
+import app from './app';
+import settings from './settings';
+import todo from './todo';
 
 const context = createReduxHistoryContext({
   reduxTravelling: true,
@@ -25,6 +26,7 @@ const reducer = persistReducer({
   router: context.routerReducer,
   app: app.reducer,
   settings: settings.reducer,
+  todo: todo.reducer,
   // TIP: add reducers here...
 }));
 

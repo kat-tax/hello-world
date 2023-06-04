@@ -28,12 +28,11 @@ export default defineConfig(config => {
     define: {
       global: 'window',
       __DEV__: isDev,
-      ...{
+      ...isDev && {
         process: {
           env: {
-            DEV: JSON.stringify(isDev ? 'true' : 'false'),
-            NODE_ENV: JSON.stringify(isDev ? 'development' : 'production'),
-            TAMAGUI_TARGET: JSON.stringify('web'),
+            DEV: JSON.stringify('true'),
+            NODE_ENV: JSON.stringify('development'),
           },
         },
       },

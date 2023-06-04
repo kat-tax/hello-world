@@ -6,7 +6,7 @@ import {Media} from 'interface/routes/Media';
 import {Snippets} from 'interface/routes/Snippets';
 import {Settings} from 'interface/routes/Settings';
 import {Router, Routes, Route} from 'extensions/navigation';
-import {history} from 'store/redux';
+import {history} from 'store';
 
 export function Main() {
   return (

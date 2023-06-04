@@ -1,11 +1,14 @@
 import {createSlice} from '@reduxjs/toolkit';
 import * as reducers from './reducers';
-import type {SettingsStore} from './types';
+import type {TodoStore} from './types';
 
-export const initialState: SettingsStore = {};
+export const initialState: TodoStore = {
+  active: [],
+  complete: [],
+};
 
 export default createSlice({
-  name: 'app',
+  name: 'todo',
   initialState,
   reducers,
 });

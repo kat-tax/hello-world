@@ -2,13 +2,16 @@ import {t} from '@lingui/macro';
 import {StyleSheet, ScrollView, Pressable, Text, TextInput} from 'react-native';
 import {useRef} from 'react';
 import {useLingui} from '@lingui/react';
-import {useSyncedStore} from '@syncedstore/react';
+import {useSelector, useDispatch} from 'react-redux';
 import {useScheme} from 'interface/hooks/useScheme';
 import {Page} from 'interface/base/Page';
-import store from 'store/synced';
+import {getActive, getComplete} from 'store/todo/selectors';
+import todo from 'store/todo';
 
 export function Tasks() {
-  const state = useSyncedStore(store);
+  const dispatch = useDispatch();
+  const complete = useSelector(getComplete);
+  const active = useSelector(getActive);
   const scheme = useScheme();
   const refInput = useRef<TextInput>(null);
   const isDark = scheme === 'dark';
@@ -29,28 +32,24 @@ export function Tasks() {
   };
 
   useLingui();
+
   return (
     <Page title={t`Tasks`}>
       <ScrollView contentContainerStyle={styles.list}>
-        {state.tasksCompleted.map((task, index) =>
-          <Pressable key={index} style={styles.item} onPress={() => {
-            state.tasksCompleted.splice(index, 1);
-            state.tasksActive.unshift(task);
-          }}>
-            <Text style={classes.textComplete}>
-              {`${index+1}. ${task}`}
-            </Text>
-          </Pressable>
+        {complete.map((item, index) =>
+          <Text key={item}
+            style={classes.textComplete}
+            onPress={() => dispatch(todo.actions.add({item}))}>
+            {`${index+1}. ${item}`}
+          </Text>
         )}
-        {state.tasksActive.map((task, index) =>
-          <Pressable key={index} style={styles.item} onPress={() => {
-            state.tasksActive.splice(index, 1);
-            state.tasksCompleted.push(task);
-          }}>
-            <Text style={classes.textActive}>
-              {`${state.tasksCompleted.length + index + 1}. ${task}`}
-            </Text>
-          </Pressable>
+        {active.map((item, index) =>
+          <Text
+            key={item}
+            style={classes.textActive}
+            onPress={() => dispatch(todo.actions.complete({item}))}>
+            {`${complete.length + index + 1}. ${item}`}
+          </Text>
         )}
       </ScrollView>
       <TextInput
@@ -59,8 +58,11 @@ export function Tasks() {
         placeholder={t`Add a task`}
         placeholderTextColor={isDark ? '#666' : '#ccc'}
         onSubmitEditing={e => {
-          store.tasksActive.push(e.nativeEvent.text);
-          refInput.current?.clear();
+          const item = e.nativeEvent.text;
+          if (item) {
+            dispatch(todo.actions.add({item}));
+            refInput.current?.clear();
+          }
         }}
       />
     </Page>
@@ -74,9 +76,6 @@ const styles = StyleSheet.create({
     height: '100%',
     marginVertical: 12,
     marginHorizontal: 6,
-  },
-  item: {
-    flexDirection: 'row',
   },
   text: {
     color: '#000',

@@ -1,2 +1,5 @@
 node_modules
 **/.tamagui/*
+stats.html
+dist/
+.DS_Store
