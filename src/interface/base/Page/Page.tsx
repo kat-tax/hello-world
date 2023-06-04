@@ -26,7 +26,7 @@ export function Page(props: PageProps) {
   return (
     <View style={classes.root}>
       <View style={styles.content}>
-        <Text selectable style={classes.title}>
+        <Text style={classes.title}>
           {props.title}
         </Text>
         {props.children}

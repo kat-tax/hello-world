@@ -4,6 +4,6 @@ import 'react-native-gesture-handler';
 
 import config from 'react-native-ultimate-config';
 import {AppRegistry} from 'react-native';
-import {Main} from 'interface/Main';
+import {App} from 'interface/App';
 
-AppRegistry.registerComponent(config.APP_NAME, () => Main);
+AppRegistry.registerComponent(config.APP_NAME, () => App);
