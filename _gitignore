@@ -1,6 +1,7 @@
 # Project
 #
 dist/
+**/.tamagui/*
 
 # OSX
 #
